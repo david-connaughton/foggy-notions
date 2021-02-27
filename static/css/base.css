@@ -1,0 +1,138 @@
+/*-----------------------Font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap');
+
+h1, h2,h3,h4,h5, h6 {
+    font-family: 'Righteous', cursive;
+    letter-spacing: 2px;
+}
+
+h1 {
+    color: #ED0000;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: #FBFFFC !important;
+}
+
+p, h3, small, blockquote {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    background-color: #FBFFFC;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*-----------------------Navbar*/
+
+.navbar {
+    background-color: #FBFFFC;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Righteous' !important;
+    margin: 0px;
+    padding: 20px 0px;
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    padding-left: 30px;
+    color: #141411!important;
+    font-family: 'Righteous' !important;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.navbar-nav :link,
+.navbar-nav :visited {
+    color: #141411!important;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.navbar-nav :hover,
+.navbar-nav :active {
+    color: #ED0000!important;
+}
+
+a .concerts-link :hover,
+a .concerts-link :active {
+    color: #ED0000!important;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+/*-----------------------Footer*/
+
+#footer {
+    font-family:'Righteous', cursive;
+    font-size: 15px;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+/*-----------------------Home Page*/
+
+.cover-image {
+    background-image: url('/media/cover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.cover-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.photo-credit {
+    text-decoration: none;
+    color: #141411!important;
+}
+
+.photo-credit :hover {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.page-button {
+    color: #ED0000;
+    border-color: #141411;
+    font-family: 'Raleway', sans-serif;
+}
+
+.fas,
+.fab {
+    color: #ED0000;
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+    display: block; 
+}
+
+.facebook {
+    color: #4267B2;
+}
+
+.twitter {
+    color: #1DA1F2
+}
+
+.instagram {
+    color:  #405DE6
+}
