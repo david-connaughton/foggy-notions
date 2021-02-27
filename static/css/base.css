@@ -136,3 +136,51 @@ a:hover {
 .instagram {
     color:  #405DE6
 }
+
+/*-----------------------Media Queries*/
+
+@media screen and (max-width: 500px) {
+
+    .cover-image {
+        background-image: url('/media/cover-small.jpg');
+        height: 300px;
+    }
+
+    .brand-text {
+        font-size: 50px;
+    }
+
+    .navbar-brand {
+        display: block;
+    }
+
+    .fas,
+    .fab {
+        /* color: #ED0000; */
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 992px) {
+
+    .navbar-brand {
+        display: block;
+    }
+
+    .brand-text {
+        font-size: 75px;
+    }
+
+}
+
+@media screen and (min-width: 993px) {
+
+    .cover-image {
+        height: 700px;
+    }
+
+}
