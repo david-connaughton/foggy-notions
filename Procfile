@@ -1,1 +1,1 @@
-web: gunicorn foggy_notions.wsgi.application
+web: gunicorn foggy_notions.wsgi:application
