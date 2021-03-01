@@ -14,7 +14,7 @@ h1 {
     text-shadow: #FBFFFC !important;
 }
 
-p, h3, small, blockquote {
+p, h3, small, a, blockquote {
     font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
 }
@@ -166,6 +166,15 @@ a:hover {
     font-size: 20px;
 }
 
+#concerts {
+    color: #ED0000!important;
+}
+
+#concert-image {
+    max-width: 384px;
+    max-height: 535px;
+}
+
 /*-----------------------Media Queries*/
 
 @media screen and (max-width: 500px) {
@@ -203,6 +212,11 @@ a:hover {
         font-size: 20px;
     }
 
+    #concert-image {
+        max-width: 384px;
+        max-height: 400px;
+}
+
 }
 
 @media screen and (min-width: 501px) and (max-width: 992px) {
@@ -218,6 +232,11 @@ a:hover {
     .card {
         width: 18rem;
         height: 44rem;
+    }
+
+    #concert-image {
+        max-width: 384px;
+        max-height: 400px;
     }
 
 }

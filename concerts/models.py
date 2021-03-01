@@ -23,6 +23,7 @@ class Concert(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     video = EmbedVideoField(null=True, blank=True)
+    artist_website = models.URLField(max_length=1024, null=True, blank=True)
     slug = models.SlugField(null=False)
     date_posted = models.DateTimeField(default=timezone.now)
     publish = models.DateTimeField(auto_now=False, auto_now_add=False)

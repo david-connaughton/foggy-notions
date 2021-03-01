@@ -3,6 +3,7 @@ from django.utils import timezone
 
 from django.views.generic import (
     ListView,
+    DetailView,
 )
 
 from .models import Concert
@@ -15,3 +16,8 @@ class ConcertListView(ListView):
 
     def get_queryset(self):
         return Concert.objects.filter(publish__lte=timezone.now())
+
+
+class ConcertDetailView(DetailView):
+    model = Concert
+    template_name = 'concerts/concert_details.html'

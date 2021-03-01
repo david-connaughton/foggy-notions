@@ -16,7 +16,7 @@
 <section>
     <div class="row">
         {% for concert in concerts %}
-        <div class="col-12 col-md-4 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="card m-5 mx-auto text-center card-outline">
                 <img src="{{ concert.image.url }}" alt="Card image cap" class="card-img-top">
                 <div class="card-body">
@@ -25,7 +25,7 @@
                     </div>
                     <h3 class="card-text">{{ concert.venue }}</h3>
                     <h3 class="card-text">{{ concert.date_one }}</h3>
-                    <a href="{}" class="btn btn-outline page-button">
+                    <a href="{% url 'concert_details' concert.slug %}" class="btn btn-outline page-button">
                         <i class="fas fa-info-circle concert-info"></i>
                         Details
                     </a>

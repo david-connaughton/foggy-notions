@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12 mt-3 pt-3 mx-auto text-center">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <div class="card mx-auto mb-5 text-center card-outline" id="concert-image">
+                    <img src="{{ concert.image.url }}" alt="Card image cap" class="card-img-top">
+                </div>
+                <h2>Presented by {{ concert.presented_by }}</h2>
+                <br />
+                <h3>{{ concert.artist }}</h3>
+                <br />
+                <h3>{{ concert.venue }}</h3>
+                <br />
+                <h3>{{ concert.date_one }} {% if concert.date_two %} {{ concert.date_two }} {% endif %}</h3>
+                <br />
+                <h3>{{ concert.time }}</h3>
+                <br />
+                <a href="{{ concert.tickets }}" class="btn btn-outline page-button text-center mb-5" target="_blank">
+                    <i class="fas fa-ticket-alt concert-info"></i>
+                    Tickets
+                </a>
+                <br />
+                <span>
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&width=67&height=20&appId"
+                        width="67" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+                    </script>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+    <h2 class="text-center my-5">{{ concert.artist }}</h2>
+    {{ concert.content|safe }}
+</div>
+<br />
+<div class="container-fluid">
+    <div class="text-center my-5">
+        <a href="{{ concert.artist_website }}" target="_blank" class="photo-credit">
+            <i class="fas fa-music concert-info"></i>
+            {{ concert.artist }} Website
+        </a>
+    </div>
+</div>
+
+<div class="container-fluid">
+    {% video concert.video as my_video %}
+    <div class="embed-responsive embed-responsive-16by9">{% video my_video 'medium' %}</div>
+    {% endvideo %}
+</div>
+
+{% endblock %}
