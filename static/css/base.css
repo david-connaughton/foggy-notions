@@ -76,7 +76,7 @@ a .concerts-link :active {
     letter-spacing: 2px;
 }
 
-/*-----------------------Home Page*/
+/*-----------------------Home App*/
 
 .cover-image {
     background-image: url('/media/cover.jpg');
@@ -137,6 +137,35 @@ a:hover {
     color:  #405DE6
 }
 
+/*-----------------------Concerts App*/
+
+.concerts-button {
+    color: #FBFFFC;
+    text-decoration: none;
+}
+
+.concerts-button :hover {
+    color: #ED0000!important;
+}
+
+.card {
+    width: 24rem;
+    height: 50rem;
+}
+
+.card-outline {
+    border: solid #141411 2px;
+    background-color: #FBFFFC;
+    padding: 10px;
+    margin: 10px;
+}
+
+.concert-info {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
 /*-----------------------Media Queries*/
 
 @media screen and (max-width: 500px) {
@@ -163,6 +192,17 @@ a:hover {
         text-decoration: none;
     }
 
+    .card {
+        width: 18rem;
+        height: 44rem;
+    }
+
+    .concert-info {
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+    }
+
 }
 
 @media screen and (min-width: 501px) and (max-width: 992px) {
@@ -173,6 +213,11 @@ a:hover {
 
     .brand-text {
         font-size: 75px;
+    }
+
+    .card {
+        width: 18rem;
+        height: 44rem;
     }
 
 }
