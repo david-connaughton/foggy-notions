@@ -14,7 +14,7 @@ h1 {
     text-shadow: #FBFFFC !important;
 }
 
-p, h3, small, a, blockquote {
+p, h3, small, blockquote {
     font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
 }
@@ -135,6 +135,10 @@ a:hover {
 
 .instagram {
     color:  #405DE6
+}
+
+#message {
+    color: #ED0000;
 }
 
 /*-----------------------Concerts App*/
