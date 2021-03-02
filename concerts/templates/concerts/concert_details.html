@@ -43,7 +43,7 @@
 <hr>
 
 <div class="container-fluid">
-    <h2 class="text-center my-5">{{ concert.artist }}</h2>
+    <h2 class="text-center my-5">{{ concert.artist }} {% if concert.artist_one %}& {{ concert.artist_one }} {% endif %}</h2>
     {{ concert.content|safe }}
 </div>
 <br />
