@@ -9,7 +9,7 @@ class Concert(models.Model):
     presented_by = models.CharField(max_length=100,
                                     default="Foggy Notions")
     artist = models.CharField(max_length=200, default="Artist")
-    artist_one = models.CharField(max_length=200, default="Artist")
+    artist_one = models.CharField(max_length=200, null=True, blank=True)
     venue = models.CharField(max_length=100, default="Venue")
     date_one = models.DateField()
     date_two = models.DateField(null=True, blank=True)
