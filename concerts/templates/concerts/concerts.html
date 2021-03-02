@@ -21,7 +21,7 @@
                 <img src="{{ concert.image.url }}" alt="Card image cap" class="card-img-top">
                 <div class="card-body">
                     <div class="artist">
-                        <h2 class="card-title">{{ concert.artist }}</h2>
+                        <h2 class="card-title">{{ concert.artist }} {% if concert.artist_one %}% {{ concert.artist_one }} {% endif %}</h2>
                     </div>
                     <h3 class="card-text">{{ concert.venue }}</h3>
                     <h3 class="card-text">{{ concert.date_one }} {% if concert.date_two %}& {{ concert.date_two }} {% endif %} {% if concert.date_three %} & {{ concert.date_three }} {% endif %}</h3>
