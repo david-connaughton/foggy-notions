@@ -24,7 +24,7 @@
                         <h2 class="card-title">{{ concert.artist }}</h2>
                     </div>
                     <h3 class="card-text">{{ concert.venue }}</h3>
-                    <h3 class="card-text">{{ concert.date_one }} {% if concert.date_two %}& {{ concert.date_two }} {% endif %}</h3>
+                    <h3 class="card-text">{{ concert.date_one }} {% if concert.date_two %}& {{ concert.date_two }} {% endif %} {% if concert.date_three %} & {{ concert.date_three }} {% endif %}</h3>
                     <a href="{% url 'concert_details' concert.slug %}" class="btn btn-outline page-button">
                         <i class="fas fa-info-circle concert-info"></i>
                         Details
