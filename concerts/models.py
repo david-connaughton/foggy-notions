@@ -9,6 +9,7 @@ class Concert(models.Model):
     presented_by = models.CharField(max_length=100,
                                     default="Foggy Notions")
     artist = models.CharField(max_length=200, default="Artist")
+    artist_one = models.CharField(max_length=200, default="Artist")
     venue = models.CharField(max_length=100, default="Venue")
     date_one = models.DateField()
     date_two = models.DateField(null=True, blank=True)
@@ -24,6 +25,8 @@ class Concert(models.Model):
     image = models.ImageField(null=True, blank=True)
     video = EmbedVideoField(null=True, blank=True)
     artist_website = models.URLField(max_length=1024, null=True, blank=True)
+    artist_website_one = models.URLField(
+        max_length=1024, null=True, blank=True)
     slug = models.SlugField(null=False)
     date_posted = models.DateTimeField(default=timezone.now)
     publish = models.DateTimeField(auto_now=False, auto_now_add=False)

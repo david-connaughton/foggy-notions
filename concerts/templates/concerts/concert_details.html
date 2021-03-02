@@ -13,7 +13,7 @@
                 </div>
                 <h2>Presented by {{ concert.presented_by }}</h2>
                 <br />
-                <h3>{{ concert.artist }}</h3>
+                <h3>{{ concert.artist }} {% if concert.artist_one %}& {{ concert.artist_one }} {% endif %}</h3>
                 <br />
                 <h3>{{ concert.venue }}</h3>
                 <br />
@@ -53,8 +53,16 @@
             <i class="fas fa-music concert-info"></i>
             {{ concert.artist }} Website
         </a>
+        <br />
+        {% if artist_website_one %}
+        <a href="{{ concert.artist_website_one }}" target="_blank" class="photo-credit">
+            <i class="fas fa-music concert-info"></i>
+            {{ concert.artist_one }} Website
+        </a>
+        {% endif %}
     </div>
 </div>
+
 
 <div class="container-fluid">
     {% video concert.video as my_video %}
