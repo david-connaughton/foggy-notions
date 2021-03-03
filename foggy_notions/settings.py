@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['foggy-notions.herokuapp.com',
-                 '127.0.0.1', 'www.foggynotions.ie']
+                 '127.0.0.1', 'www.foggynotions.ie', 'foggynotions.ie', ]
 
 SECURE_SSL_REDIRECT = True
 
