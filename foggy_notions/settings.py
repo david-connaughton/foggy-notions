@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = ['foggy-notions.herokuapp.com',
                  '127.0.0.1', 'www.foggynotions.ie', 'foggynotions.ie', ]
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 # Application definition
 
@@ -122,7 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Dublin'
+USE_TZ = True
 
 USE_I18N = True
 
