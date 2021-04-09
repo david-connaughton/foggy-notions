@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['foggy-notions.herokuapp.com',
 
 # SECURE_SSL_REDIRECT = True
 
+SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
+
 # Application definition
 
 INSTALLED_APPS = [
