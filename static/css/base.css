@@ -2,7 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap');
 
-h1, h2,h3,h4,h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Righteous', cursive;
     letter-spacing: 2px;
 }
@@ -14,7 +19,10 @@ h1 {
     text-shadow: #FBFFFC !important;
 }
 
-p, h3, small, blockquote {
+p,
+h3,
+small,
+blockquote {
     font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
 }
@@ -39,7 +47,7 @@ body {
 .navbar-brand {
     font-size: 25px;
     padding-left: 30px;
-    color: #141411!important;
+    color: #141411 !important;
     font-family: 'Righteous' !important;
     text-transform: capitalize;
     letter-spacing: 2px;
@@ -47,19 +55,19 @@ body {
 
 .navbar-nav :link,
 .navbar-nav :visited {
-    color: #141411!important;
+    color: #141411 !important;
     font-size: 25px;
     justify-content: center;
 }
 
 .navbar-nav :hover,
 .navbar-nav :active {
-    color: #ED0000!important;
+    color: #ED0000 !important;
 }
 
 a .concerts-link :hover,
 a .concerts-link :active {
-    color: #ED0000!important;
+    color: #ED0000 !important;
     text-decoration: none;
 }
 
@@ -67,10 +75,31 @@ a .concerts-link :active {
     display: none;
 }
 
+/*-----------------------Back to Top Button*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 10px;
+    border: 1px solid #141411;
+    outline: none;
+    background-color: #FBFFFC;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #141411;
+}
+
 /*-----------------------Footer*/
 
 #footer {
-    font-family:'Righteous', cursive;
+    font-family: 'Righteous', cursive;
     font-size: 15px;
     justify-content: center;
     letter-spacing: 2px;
@@ -99,7 +128,7 @@ a .concerts-link :active {
 
 .photo-credit {
     text-decoration: none;
-    color: #141411!important;
+    color: #141411 !important;
 }
 
 .photo-credit :hover {
@@ -112,7 +141,7 @@ a:hover {
 
 .page-button {
     color: #ED0000;
-    border-radius: 5px!important;
+    border-radius: 5px !important;
     border-color: #141411;
     padding: 6px 12px;
     margin: 0px 0px 8px;
@@ -129,7 +158,7 @@ a:hover {
     font-size: 30px;
     padding: 10px;
     margin: 5px;
-    display: block; 
+    display: block;
 }
 
 .facebook {
@@ -141,7 +170,7 @@ a:hover {
 }
 
 .instagram {
-    color:  #405DE6
+    color: #405DE6
 }
 
 #message {
@@ -149,10 +178,11 @@ a:hover {
     text-align: center;
 }
 
-select, input {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
+select,
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 /*-----------------------Concerts App*/
@@ -163,7 +193,7 @@ appearance: none;
 }
 
 .concerts-button :hover {
-    color: #ED0000!important;
+    color: #ED0000 !important;
 }
 
 .card {
@@ -185,7 +215,7 @@ appearance: none;
 }
 
 #concerts {
-    color: #ED0000!important;
+    color: #ED0000 !important;
 }
 
 #concert-image {
@@ -237,7 +267,7 @@ hr {
     #concert-image {
         max-width: 384px;
         max-height: 400px;
-}
+    }
 
 }
 
