@@ -86,7 +86,8 @@ a .concerts-link :active {
     font-size: 10px;
     border: 1px solid #141411;
     outline: none;
-    background-color: #FBFFFC;
+    background-color: transparent;
+    color: #ED0000 !important;
     cursor: pointer;
     padding: 1px;
     border-radius: 4px;
