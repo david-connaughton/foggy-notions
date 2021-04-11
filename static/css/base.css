@@ -97,6 +97,10 @@ a .concerts-link :active {
     background-color: #141411;
 }
 
+#myBtn:visited {
+    background-color: transparent;
+}
+
 /*-----------------------Footer*/
 
 #footer {
