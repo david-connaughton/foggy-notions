@@ -44,7 +44,7 @@ def subscribe(email):
 
 
 def festivals(request):
-    """ A view to render concerts"""
+    """ A view to render festivals"""
     festivals = Festival.objects.filter(publish__lte=timezone.now())
     template = 'festivals/festivals.html'
     context = {
@@ -64,7 +64,7 @@ def festivals(request):
 
 
 def festival_detail(request, slug):
-    """A custom view for individual concert details"""
+    """A custom view for individual festival details"""
     festival = get_object_or_404(Festival, slug=slug)
     template = 'festivals/festival_details.html'
     context = {
@@ -74,7 +74,7 @@ def festival_detail(request, slug):
         email = request.POST['email']
         subscribe(email)                    # function to access mailchimp
         messages.success(request, "Thank you for subscribing!")  # message
-        concert = get_object_or_404(Concert, slug=slug)
+        festival = get_object_or_404(Festival, slug=slug)
         template = 'festivals/festival_details.html'
         context = {
             'festivals': festivals,
