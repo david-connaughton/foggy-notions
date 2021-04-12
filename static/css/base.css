@@ -84,13 +84,13 @@ div.dropdown-menu.show {
 
 .navbar-nav :link,
 .navbar-nav :visited {
-    color: #ED0000 !important;
+    color: #141411 !important;
     background-color: transparent;
 }
 
 .navbar-nav :hover,
 .navbar-nav :active {
-    color: #141411 !important;
+    color: #ED0000 !important;
 }
 
 /*-----------------------Back to Top Button*/
