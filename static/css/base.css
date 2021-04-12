@@ -75,6 +75,13 @@ a .concerts-link :active {
     display: none;
 }
 
+div.dropdown-menu.show {
+    background-color: #FBFFFC !important;
+    color: #FBFFFC !important;
+    padding: 0;
+    text-align: center;
+}
+
 /*-----------------------Back to Top Button*/
 
 #myBtn {
@@ -171,11 +178,19 @@ a:hover {
 }
 
 .twitter {
-    color: #1DA1F2
+    color: #1DA1F2;
 }
 
 .instagram {
-    color: #405DE6
+    color: #405DE6;
+}
+
+.youtube {
+    color: #c4302b;
+}
+
+.website {
+    color: #2E8B57;
 }
 
 #message {

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}-Festivals{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container-fluid" id='concerts'>
+        <div class="row justify-content-center">
+            <div class="col-12 mx-auto text-center">
+                <h2 class="py-5">Upcoming Festivals</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="row">
+        {% for festival in festivals %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-5 mx-auto text-center card-outline">
+                <img src="{{ festival.image.url }}" alt="Card image cap" class="card-img-top">
+                <div class="card-body">
+                    <div class="artist">
+                        <h2 class="card-title">{{ festival.festival_name }}</h2>
+                    </div>
+                    <h3 class="card-text">{{ festival.date_start }} - {{ festival.date_end }}</h3>
+                    <a href="{% url 'festival_details' festival.slug %}" class="btn btn-outline page-button">
+                        <i class="fas fa-info-circle concert-info"></i>
+                        Details
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
