@@ -45,6 +45,16 @@
                     </a>
                 </div>
                 {% endif %}
+                {% if concert.tickets_2 %}
+                <div class="container-fluid text-center">
+                    <small>Additional Ticket Link</small>
+                    <br />
+                    <a href="{{ concert.tickets_2 }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+                {% endif %}
                 <br />
                 <span>
                     <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&width=67&height=20&appId"
