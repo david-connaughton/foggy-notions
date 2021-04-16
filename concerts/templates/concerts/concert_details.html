@@ -16,7 +16,7 @@
                 <h2>Presented by {{ concert.presented_by }}</h2>
                 <br />
                 {% if concert.in_association_with %}
-                <p>In association with {{ festival.in_association_with }}</p>
+                <p>In association with {{ concert.in_association_with }}</p>
                 {% endif %}
                 <br />
                 <h3>{{ concert.artist }} {% if concert.artist_one %}& {{ concert.artist_one }} {% endif %}</h3>
