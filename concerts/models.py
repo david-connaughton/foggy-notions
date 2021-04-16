@@ -8,6 +8,9 @@ from embed_video.fields import EmbedVideoField
 class Concert(models.Model):
     presented_by = models.CharField(max_length=100,
                                     default="Foggy Notions")
+    in_association_with = models.CharField(
+        max_length=200, null=True, blank=True
+    )
     artist = models.CharField(max_length=200, default="Artist")
     artist_one = models.CharField(max_length=200, null=True, blank=True)
     venue = models.CharField(max_length=100, default="Venue")
@@ -20,6 +23,8 @@ class Concert(models.Model):
     rescheduled_to_2 = models.DateField(null=True, blank=True)
     time = models.TimeField()
     tickets = models.URLField(max_length=1024, null=True, blank=True)
+    tickets_1 = models.URLField(max_length=1024, null=True, blank=True)
+    tickets_2 = models.URLField(max_length=1024, null=True, blank=True)
     content = models.TextField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)

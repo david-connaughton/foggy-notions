@@ -15,6 +15,10 @@
                 </div>
                 <h2>Presented by {{ concert.presented_by }}</h2>
                 <br />
+                {% if concert.in_association_with %}
+                <p>In association with {{ festival.in_association_with }}</p>
+                {% endif %}
+                <br />
                 <h3>{{ concert.artist }} {% if concert.artist_one %}& {{ concert.artist_one }} {% endif %}</h3>
                 <br />
                 <h3>{{ concert.venue }}</h3>
@@ -23,10 +27,24 @@
                 <br />
                 <h3>{{ concert.time }}</h3>
                 <br />
-                <a href="{{ concert.tickets }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
-                    <i class="fas fa-ticket-alt concert-info"></i>
-                    Tickets
-                </a>
+                <div class="container-fluid text-center">
+                    <small>Ticket Link</small>
+                    <br />
+                    <a href="{{ concert.tickets }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+                {% if concert.tickets_1 %}
+                <div class="container-fluid text-center">
+                    <small>Additional Ticket Link</small>
+                    <br />
+                    <a href="{{ concert.tickets_1 }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+                {% endif %}
                 <br />
                 <span>
                     <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&width=67&height=20&appId"
