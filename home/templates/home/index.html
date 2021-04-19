@@ -26,11 +26,17 @@
     </div>
     {% for post in posts %}
     <div class="row dark-border">
+        <h3>{{ post.category }}</h3>
+        <small>{{ post.date_posted }}</small>
         <div class="col-md-6 offset-md-3 text-center mb-4">
             <p><img src="{{ post.image.url }}" class="post-image">
             <h4>{{ post.title }}</h4>
             </p>
             {{ post.content|safe }}
+            <a href="{{ post.more_info_link }}" class="btn btn-outline page-button">
+                <i class="fas fa-info-circle concert-info"></i>
+                Details
+            </a>
         </div>
     </div>
     <br />
