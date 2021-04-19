@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = ['foggy-notions.herokuapp.com',
                  '127.0.0.1', 'www.foggynotions.ie', 'foggynotions.ie', ]
 
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 
 SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
 
