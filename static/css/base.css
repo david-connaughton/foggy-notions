@@ -175,6 +175,16 @@ a:hover {
     background-color: #FBFFFC;
 }
 
+.post-image {
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+
+.dark-border {
+    border-bottom: solid 2px #141411;
+}
+
 .fas,
 .fab {
     color: #ED0000;
