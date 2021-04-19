@@ -28,9 +28,9 @@
     <div class="container-fluid dark-border">
 
         <div class="col-md-6 offset-md-3 text-center mb-4">
-            <small class="text-center">Published: {{ post.date_posted }}</small>
             <p><img src="{{ post.image.url }}" class="post-image">
             <h4>{{ post.title }}</h4>
+            <small class="text-center mt-2">Published: {{ post.date_posted }}</small>
             </p>
             {{ post.content|safe }}
             <br />
