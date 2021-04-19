@@ -25,10 +25,10 @@
         </div>
     </div>
     {% for post in posts %}
-    <div class="row dark-border col-md-6 offset-md-3 text-center mb-4">
+    <div class="row dark-border col-12 text-center mb-4">
         <h4 class="text-center">{{ post.category }}</h4>
         <br />
-        <small class="text-center">{{ post.date_posted }}</small>
+        <small class="text-center">Published: {{ post.date_posted }}</small>
         <div class="col-md-6 offset-md-3 text-center mb-4">
             <p><img src="{{ post.image.url }}" class="post-image">
             <h4>{{ post.title }}</h4>
