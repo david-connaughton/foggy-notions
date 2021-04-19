@@ -15,4 +15,27 @@
         <small>Image by <a href="https://www.instagram.com/connaughtonshane/?hl=en" target="_blank" class="photo-credit">Shane Connaughton©</a></small>
     </div>
 </section>
+<section>
+
+    <div class="container-fluid" id='concerts'>
+        <div class="row justify-content-center">
+            <div class="col-12 mx-auto text-center">
+                <h2 class="py-5">News</h2>
+            </div>
+        </div>
+    </div>
+    {% for post in posts %}
+    <div class="row" style="border-bottom: solid 2px black;">
+        <div class="col-md-6 offset-md-3 text-center mb-4">
+            <p><img src="{{ post.image.url }}" height=200px width=200px style="float:left;">
+            <h4>{{ post.title }}</h4>
+            </p>
+            {{ post.content|safe }}
+        </div>
+    </div>
+    <br />
+    {% endfor %}
+</section>
+
+
 {% endblock %}

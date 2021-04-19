@@ -5,10 +5,14 @@ from django.urls import reverse
 
 
 class Post(models.Model):
+    category = models.CharField(
+        max_length=100, default="New Show Announcement")
     title = models.CharField(max_length=100)
     content = models.TextField()
     image = models.ImageField(null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
+    publish = models.DateTimeField(auto_now=False, auto_now_add=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

@@ -44,7 +44,8 @@ def subscribe(email):
 
 
 def home(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(
+        publish__lte=timezone.now()).order_by('date_posted')[0:7]
     template = 'home/index.html'
     context = {
         'posts': posts,
@@ -53,7 +54,8 @@ def home(request):
         email = request.POST['email']
         subscribe(email)   # function to access mailchimp
         messages.success(request, "Thank you for subscribing!")  # message
-        posts = Post.objects.all()
+        posts = Post.objects.filter(
+            publish__lte=timezone.now()).order_by('date_posted')[0:7]
         template = 'home/index.html'
         context = {
             'posts': posts,
