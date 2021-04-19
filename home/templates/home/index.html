@@ -25,19 +25,20 @@
         </div>
     </div>
     {% for post in posts %}
+    <div class="container-fluid dark-border">
 
-    <div class="col-md-6 offset-md-3 text-center mb-4 dark-border">
-        <p><img src="{{ post.image.url }}" class="post-image">
-        <h4>{{ post.title }}</h4>
-        </p>
-        {{ post.content|safe }}
-        <br />
-        <small class="text-center">Published: {{ post.date_posted }}</small>
-        <br />
-        <a href="{{ post.more_info_link }}" class="btn btn-outline page-button">
-            <i class="fas fa-info-circle concert-info"></i>
-            Details
-        </a>
+        <div class="col-md-6 offset-md-3 text-center mb-4">
+            <small class="text-center">Published: {{ post.date_posted }}</small>
+            <p><img src="{{ post.image.url }}" class="post-image">
+            <h4>{{ post.title }}</h4>
+            </p>
+            {{ post.content|safe }}
+            <br />
+            <a href="{{ post.more_info_link }}" class="btn btn-outline page-button">
+                <i class="fas fa-info-circle concert-info"></i>
+                Details
+            </a>
+        </div>
     </div>
 
     <br />
