@@ -26,7 +26,7 @@
                     <div class="artist">
                         <h2 class="card-title">{{ festival.festival_name }}</h2>
                     </div>
-                    <h3 class="card-text">{{ festival.date_start }} - {{ festival.date_end }}</h3>
+                    <h3 class="card-text">{{ festival.date_start }} {% if festival.date_end %} - {{ festival.date_end }} {% endif %}</h3>
                     <a href="{% url 'festival_details' festival.slug %}" class="btn btn-outline page-button">
                         <i class="fas fa-info-circle concert-info"></i>
                         Details
