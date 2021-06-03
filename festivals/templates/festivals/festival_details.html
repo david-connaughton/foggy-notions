@@ -20,7 +20,7 @@
                 <h3>{{ festival.festival_name }}</h3>
                 <br />
                 <br />
-                <h3>{{ festival.date_start }} - {{ festival.date_end }}</h3>
+                <h3>{{ festival.date_start }} - {% if festival.date_end %}{{ festival.date_end }} {% endif %}</h3>
                 <br />
                 <a href="https://www.musictown.ie/" target="_blank" class="btn btn-outline page-button mb-3">
                     <i class="fas fa-info-circle concert-info"></i>
