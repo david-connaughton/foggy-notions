@@ -63,7 +63,7 @@ def strings(request):
     return render(request, template, context)
 
 
-def string_detail(request, slug):
+def strings_detail(request, slug):
     """A custom view for individual concert details"""
     string = get_object_or_404(String, slug=slug)
     template = 'strings/string_details.html'
