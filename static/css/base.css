@@ -273,6 +273,16 @@ hr {
 
 }
 
+
+.strings-image {
+    background-image: url('/media/strings.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
 /*-----------------------Media Queries*/
 
 @media screen and (max-width: 500px) {
