@@ -274,14 +274,14 @@ hr {
 }
 
 
-.strings-image {
+/* .strings-image {
     background-image: url('/media/strings.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
     position: relative;
-}
+} */
 
 /*-----------------------Media Queries*/
 
