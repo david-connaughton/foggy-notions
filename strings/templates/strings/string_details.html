@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block extra_title %}-{{ string.artist }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12 mt-3 pt-3 mx-auto text-center">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <div class="card mx-auto mb-5 text-center card-outline" id="concert-image">
+                    <img src="{{ string.image.url }}" alt="Card image cap" class="card-img-top">
+                </div>
+                <h2>Presented by {{ string.presented_by }}</h2>
+                <br />
+                {% if string.in_association_with %}
+                <p>In association with {{ string.in_association_with }}</p>
+                {% endif %}
+                <br />
+                <h3>{{ string.artist }} {% if string.artist_one %}& {{ string.artist_one }} {% endif %}</h3>
+                <br />
+                <h3>{{ string.venue }}</h3>
+                <br />
+                <h3>{{ string.date_one }} {% if string.date_two %}& {{ string.date_two }} {% endif %} {% if string.date_three %} & {{ string.date_three }} {% endif %}</h3>
+                <br />
+                <h3>{{ string.time }}</h3>
+                <br />
+                <div class="container-fluid text-center">
+                    <small>Ticket Link</small>
+                    <br />
+                    <a href="{{ string.tickets }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+                {% if string.tickets_1 %}
+                <div class="container-fluid text-center">
+                    <small>Additional Ticket Link</small>
+                    <br />
+                    <a href="{{ string.tickets_1 }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+                {% endif %}
+                {% if string.tickets_2 %}
+                <div class="container-fluid text-center">
+                    <small>Additional Ticket Link</small>
+                    <br />
+                    <a href="{{ string.tickets_2 }}" class="btn btn-outline page-button text-center mb-4" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+                {% endif %}
+                <br />
+                <span>
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&width=67&height=20&appId"
+                        width="67" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+                    </script>
+                </span>
+                <br />
+                <a href="{% url 'strings' %}" class="btn btn-outline page-button text-center mt-4">
+                    <i class="fas fa-arrow-circle-left fa-lg concert-info">
+                    </i>
+                    All Strings
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+    <h2 class="text-center my-5">{{ string.artist }} {% if string.artist_one %}& {{ string.artist_one }} {% endif %}</h2>
+    {{ string.content|safe }}
+</div>
+<br />
+<div class="container-fluid">
+    <div class="text-center my-5">
+        <a href="{{ string.artist_website }}" target="_blank" class="photo-credit">
+            <i class="fas fa-music concert-info"></i>
+            {{ string.artist }} Website
+        </a>
+        <br />
+        {% if string.artist_website_one %}
+        <a href="{{ string.artist_website_one }}" target="_blank" class="photo-credit mt-3">
+            <i class="fas fa-music concert-info"></i>
+            {{ string.artist_one }} Website
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    {% video string.video as my_video %}
+    <div class="embed-responsive embed-responsive-16by9">{% video my_video 'medium' %}</div>
+    {% endvideo %}
+</div>
+
+<div class="container-fluid text-center">
+    <a href="{% url 'strings' %}" class="btn btn-outline page-button text-center mt-4">
+        <i class="fas fa-arrow-circle-left fa-lg concert-info">
+        </i>
+        All Strings
+    </a>
+</div>
+
+{% endblock %}

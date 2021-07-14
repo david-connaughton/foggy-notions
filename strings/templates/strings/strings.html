@@ -1,21 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Title</title>
-</head>
+{% block extra_title %}-Strings{% endblock %}
 
-<body>
-    <h1>test</h1>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
+{% block content %}
 
-</html>
+<section>
+    <div class="container-fluid" id='concerts'>
+        <div class="row justify-content-center">
+            <div class="col-12 mx-auto text-center">
+                <h2 class="py-5">Strings</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+</button>
+
+<section>
+    <div class="row">
+        {% for string in strings %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card m-5 mx-auto text-center card-outline">
+                <img src="{{ string.image.url }}" alt="Card image cap" class="card-img-top">
+                <div class="card-body">
+                    <div class="artist">
+                        <h2 class="card-title">{{ string.artist }} {% if string.artist_one %}& {{ string.artist_one }} {% endif %}</h2>
+                    </div>
+                    <h3 class="card-text">{{ string.venue }}</h3>
+                    <h3 class="card-text">{{ string.date_one }} {% if string.date_two %}& {{ string.date_two }} {% endif %} {% if string.date_three %} & {{ string.date_three }} {% endif %}</h3>
+                    <a href="{% url 'string_details' string.slug %}" class="btn btn-outline page-button">
+                        <i class="fas fa-info-circle concert-info"></i>
+                        Details
+                    </a>
+                    <a href="{{ string.tickets }}" class="btn btn-outline page-button text-center" target="_blank">
+                        <i class="fas fa-ticket-alt concert-info"></i>
+                        Tickets
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block postload_js %}
+
+<script>
+
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+{% endblock %}

@@ -61,3 +61,23 @@ def strings(request):
         }
         return render(request, "strings/strings.html", context)
     return render(request, template, context)
+
+
+def string_detail(request, slug):
+    """A custom view for individual concert details"""
+    string = get_object_or_404(String, slug=slug)
+    template = 'strings/string_details.html'
+    context = {
+        'string': string,
+    }
+    if request.method == 'POST':
+        email = request.POST['email']
+        subscribe(email)                    # function to access mailchimp
+        messages.success(request, "Thank you for subscribing!")  # message
+        string = get_object_or_404(String, slug=slug)
+        template = 'strings/string_details.html'
+        context = {
+            'string': string,
+        }
+        return render(request, 'strings/string_details.html', context)
+    return render(request, 'strings/string_details.html', context)
