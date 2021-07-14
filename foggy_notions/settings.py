@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'festivals',
     'embed_video',
     'storages',
+    'strings',
 ]
 
 MIDDLEWARE = [
